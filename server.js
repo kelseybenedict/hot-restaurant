@@ -20,5 +20,10 @@ const waitList = [];
 // "phoneNumber": "979-587-0887"
 // }
 
+// routes
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+
+app.get('/reservation', (req, res) => res.sendFile(path.join(__dirname, 'reservation.html')));
+
 // Starts the server to begin listening
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
